@@ -1,0 +1,35 @@
+% !TEX root = basics.tex
+% !LPiL preamble = ../dPreamble.tex
+% !LPiL postamble = ../dPostamble.tex
+
+\lpilSection{fp-diag-basics}{The basics of MetaFun}
+
+The diSimplex/LPiL projects make use of the ConTeXt diagramming package MetaFun
+which is in turn based upon MetaPost. We do this by typesetting the diagram
+using ConTeXt and then embedding the resulting diagram in the main document as
+either a single page pdf graphic \emph{or} as an Encapsulated PostScript (eps)
+file\footnote{The choice of pdf or eps depending upon either the latex
+used or your target journal.}.
+
+To keep things simple, each figure is created in its own file. Among other
+reasons, this lets your writing tool typeset and display the results without
+having to typeset the rest of your larger document. By default the file name
+must \emph{end} with \verb|_mp.tex|, and then be included using
+\begin{center}
+  \verb|\includeLpilDiagram{firstFigure_mp}|
+\end{center}
+\noindent where \verb|firstFigure_mp.tex| is
+the name of the ConTeXt/MetaFun file which contains the associated diagram.
+
+For example:
+
+\begin{lpil:metaFun}{firstFigure_mp_tex.example}
+% !TEX root    = firstFigure_mp.tex
+% !TEX program = metafun
+\startMPpage
+fill fullcircle xyscaled (8cm,1cm) withcolor "darkred" ;
+draw textext("\bf This is text A") withcolor "white" ;
+\stopMPpage
+\end{lpil:metaFun}
+
+\includeLpilDiagram{firstFigure_mp}

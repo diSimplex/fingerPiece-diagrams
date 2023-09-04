@@ -9,7 +9,7 @@ license, visit http://creativecommons.org/licenses/by-sa/4.0/
 
 The **code/software content** of this work (and its derivatives) are
 Copyright 2023 by PerceptiSys Ltd (Stephen Gaito) and is licensed under
-the **GNU General Public License, Version 2.0q** (the "License"); you may
+the **GNU General Public License, Version 2.0** (the "License"); you may
 not use the code/software of this work except in compliance with the
 License. You may obtain a copy of the License at
 

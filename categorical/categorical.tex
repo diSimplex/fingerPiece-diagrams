@@ -8,26 +8,14 @@ We will need to draw lots of Categorical diagrams.
 
 Here is a first simple square (using MetaFun/Nodes).
 
-\begin{lpil:metaFun}{simpleSquare_mp.tex}
-% !TEX root    = simpleSquare_mp.tex
-% !TEX program = metafun
-\defineframed
-  [nodeSmall]
-  [node]
-  [foregroundstyle=small]
-\startMPpage
-clearnodepath ;
-path p ; p = fullsquare scaled 3cm ;
-nodepath = p ;
-draw node(0,"\node{$G(X)$}") ;
-draw node(1,"\node{$G(Y)$}") ;
-draw node(2,"\node{$F(Y)$}") ;
-draw node(3,"\node{$F(X)$}") ;
-drawarrow fromto.bot(0, 0, 1, "\nodeSmall{$G(f)$}") ;
-drawarrow fromto.top(0, 3, 2, "\nodeSmall{$F(f)$}") ;
-drawarrow fromto.rt (0, 2, 1, "\nodeSmall{$\eta_Y$}") ;
-drawarrow fromto.lft(0, 3, 0, "\nodeSmall{$\eta_X$}") ;
-\stopMPpage
-\end{lpil:metaFun}
+\loadLpilMetaFunCode{simpleSquare_mp.tex}
 
 \includeLpilDiagram{simpleSquare_mp}
+
+Here is a much more advanced example using the commDiag module.
+
+\loadLpilMetaFunCode{kerCoKerDiagram_mp.tex}
+
+\begin{center}
+  \includeLpilDiagram{kerCoKerDiagram_mp}
+\end{center}

@@ -23,13 +23,23 @@ the name of the ConTeXt/MetaFun file which contains the associated diagram.
 
 For example:
 
-\begin{lpil:metaFun}{firstFigure_mp_tex.example}
-% !TEX root    = firstFigure_mp.tex
-% !TEX program = metafun
-\startMPpage
-fill fullcircle xyscaled (8cm,1cm) withcolor "darkred" ;
-draw textext("\bf This is text A") withcolor "white" ;
-\stopMPpage
-\end{lpil:metaFun}
+\loadLpilMetaFunCode{firstFigure_mp.tex}
 
 \includeLpilDiagram{firstFigure_mp}
+
+
+\lpilSection{commDiag-basics}{Using the commDiag module}
+
+The ConTeXt commDiag module is a collection of MetaPost/MetaFun macros defined
+ontop of MetaPost, MetaFun, and Nodes which can be used to draw fairly
+sophisticated Categorical Diagrams.
+
+In particular the commDiag module defines various arrows on both the head and
+the tail of a given arrow (MetaPost path). It also defines a number of different
+arrow bodies.
+
+For example:
+
+\loadLpilMetaFunCode{arrowsAndLines_mp.tex}
+
+\includeLpilDiagram{arrowsAndLines_mp}

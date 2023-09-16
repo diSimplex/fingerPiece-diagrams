@@ -1,0 +1,77 @@
+% !TEX root    = colouredNet_mp.tex
+% !TEX program = metafun
+
+\usemodule[commDiag]
+
+\startMPpage
+save p, r; path p[], r[];
+
+setupCDgrid(12, 2cm, 4, 2.5cm, -90) ;
+
+draw node(p[2],  1, pnPlaceText("A")) ;
+draw node(p[2],  2, pnTransitionText("T1"));
+drawarrow fromtopaths.rt(0, p[2], 1, p[2], 2, "\nodeTiny{(x,i)}");
+draw node(p[2],  3, pnPlaceText("B")) ;
+drawarrow fromtopaths.rt(0, p[2], 2, p[2], 3, "\nodeTiny{(x,i)}");
+draw node(p[2],  4, pnTransitionText("T2"));
+drawarrow fromtopaths.rt(0, p[2], 3, p[2], 4, "\nodeTiny{(x,i)}");
+draw node(p[2],  5, pnPlaceText("C")) ;
+drawarrow fromtopaths.rt(0, p[2], 4, p[2], 5, "\nodeTiny{(x,i)}");
+draw node(p[2],  6, pnTransitionText("T3"));
+drawarrow fromtopaths.rt(0, p[2], 5, p[2], 6, "\nodeTiny{(x,i)}");
+draw node(p[2],  7, pnPlaceText("D")) ;
+drawarrow fromtopaths.rt(0, p[2], 6, p[2], 7, "\nodeTiny{(x,i)}");
+draw node(p[2],  8, pnTransitionText("T4"));
+drawarrow fromtopaths.rt(0, p[2], 7, p[2], 8, "\nodeTiny{(x,i)}");
+draw node(p[2],  9, pnPlaceText("E")) ;
+drawarrow fromtopaths.rt(0, p[2], 8, p[2], 9, "\nodeTiny{(x,i)}");
+draw node(p[2], 10, pnTransitionText("T5"));
+drawarrow fromtopaths.rt(0, p[2], 9, p[2],10, "\nodeTiny{(x,i)}");
+
+draw node(p[0], 6, pnPlaceText("Res"));
+drawarrow pnCutNodeEnds(p[0], 6, p[2], 2)(
+  pnRoundCornersAt(
+    nodesAssembleLinearPath(p[0], 6, p[1], 1, p[2], 2)
+  )(1)(20mm)
+);
+drawarrow pnCutNodeEnds(p[0], 6, p[2], 4)(
+  pnRoundCornersAt(
+    point 6 of p[0] -- point 3 of p[1] -- point 4 of p[2]
+  )(1)(20mm)
+);
+drawarrow pnCutNodeEnds(p[0], 6, p[2], 6)(
+  pnRoundCornersAt(
+    point 6 of p[0] -- point 5.5 of p[1] -- point 6 of p[2]
+  )(1)(20mm)
+);
+drawarrow pnCutNodeEnds(p[2], 6, p[0], 6)(
+  pnRoundCornersAt(
+    point 6 of p[2] -- point 6.5 of p[1] -- point 6 of p[0]
+  )(1)(20mm)
+);
+drawarrow fromtopaths.bot(0, p[0], 6, p[2], 8, "\nodeTiny{t}") ;
+drawarrow pnCutNodeEnds(p[2], 10, p[0], 6)(
+  pnRoundCornersAt(
+    point 10 of p[2] -- point 11 of p[1] -- point 6 of p[0]
+  )(1)(20mm)
+);
+
+drawarrow pnCutNodeEnds(p[2], 10, p[2], 3)(
+  pnRoundCornersAt(
+    point 10 of p[2] -- point 11 of p[2] -- point 11 of p[3]
+    -- point 3 of p[3] -- point 3 of p[2]
+  )(1,2,3)(5mm)
+);
+
+drawarrow pnCutNodeEnds(p[2], 10, p[2], 1)(
+  pnRoundCornersAt(
+    point 10 of p[2] -- point 11 of p[2] -- point 11 of p[3]
+    -- point 0 of p[3] -- point 0 of p[2] -- point 1 of p[2]
+  )(1,2,3,4)(5mm)
+);
+
+nodesStackedLabel(
+  "if $x=p$", "then $1'(p,i+1)$", "else empty"
+)(.2mm, p[1], 5.25) shifted (.5cm, 0);
+
+\stopMPpage

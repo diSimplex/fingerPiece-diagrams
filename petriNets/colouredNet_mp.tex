@@ -6,7 +6,7 @@
 \startMPpage
 save p, r; path p[], r[];
 
-setupCDgrid(12, 2cm, 4, 2.5cm, -90) ;
+setupCDgrid(12, 1.5cm, 4, 2.5cm, -90) ;
 
 draw node(p[2],  1, pnPlaceText("A")) ;
 draw node(p[2],  2, pnTransitionText("T1"));
@@ -29,49 +29,78 @@ draw node(p[2], 10, pnTransitionText("T5"));
 drawarrow fromtopaths.rt(0, p[2], 9, p[2],10, "\nodeTiny{(x,i)}");
 
 draw node(p[0], 6, pnPlaceText("Res"));
+nodesStackedLabel("V")(.2mm, p[0], 6.5);
+nodesStackedLabel(
+  "$1'r+3's+2't$"
+)(.2mm, p[0], 6) shifted( -1.5cm, 0);
 drawarrow pnCutNodeEnds(p[0], 6, p[2], 2)(
   pnRoundCornersAt(
     nodesAssembleLinearPath(p[0], 6, p[1], 1, p[2], 2)
   )(1)(20mm)
 );
+nodesStackedLabel(
+  "$1'r+1's$"
+)(.2mm, p[1], 2);
+
 drawarrow pnCutNodeEnds(p[0], 6, p[2], 4)(
   pnRoundCornersAt(
-    point 6 of p[0] -- point 3 of p[1] -- point 4 of p[2]
+    nodesAssembleLinearPath(p[0], 6, p[1], 3, p[2], 4)
   )(1)(20mm)
 );
+nodesStackedLabel(
+  "case $x$ of", "$p => 2's$", "| $q => 1's$"
+)(.2mm, p[1], 4);
+
 drawarrow pnCutNodeEnds(p[0], 6, p[2], 6)(
   pnRoundCornersAt(
-    point 6 of p[0] -- point 5.5 of p[1] -- point 6 of p[2]
+    nodesAssembleLinearPath(p[0], 6, p[1], 5.5, p[2], 6)
   )(1)(20mm)
 );
+nodesStackedLabel(
+  "if $x=p$ then $1't$", "else empty"
+)(.2mm, p[1], 5.4) shifted (.25cm, 0);
+
 drawarrow pnCutNodeEnds(p[2], 6, p[0], 6)(
   pnRoundCornersAt(
-    point 6 of p[2] -- point 6.5 of p[1] -- point 6 of p[0]
+    nodesAssembleLinearPath(p[2], 6, p[1], 6.5, p[0], 6)
   )(1)(20mm)
 );
+nodesStackedLabel(
+  "if $x=q$ then $1't$", "else empty"
+)(.2mm, p[1], 6.6) shifted( .5cm, 0);
+
 drawarrow fromtopaths.bot(0, p[0], 6, p[2], 8, "\nodeTiny{t}") ;
+
 drawarrow pnCutNodeEnds(p[2], 10, p[0], 6)(
   pnRoundCornersAt(
-    point 10 of p[2] -- point 11 of p[1] -- point 6 of p[0]
+    nodesAssembleLinearPath(p[2], 10, p[1], 11, p[0], 6)
   )(1)(20mm)
 );
+nodesStackedLabel(
+  "case $x$ of", "$p => 2's+2't$", "| $q => 2's+1't$"
+)(.2mm, p[1], 10) shifted( .5cm, 0);
 
 drawarrow pnCutNodeEnds(p[2], 10, p[2], 3)(
   pnRoundCornersAt(
-    point 10 of p[2] -- point 11 of p[2] -- point 11 of p[3]
-    -- point 3 of p[3] -- point 3 of p[2]
+    nodesAssembleLinearPath(
+      p[2], 10, p[2], 11, p[4], 11, p[4], 3, p[2], 3
+    )
   )(1,2,3)(5mm)
 );
+nodesStackedLabel(
+  "if $x=p$", "then $1'(p,i+1)$", "else empty"
+)(.2mm, p[3], 3.25);
 
 drawarrow pnCutNodeEnds(p[2], 10, p[2], 1)(
   pnRoundCornersAt(
-    point 10 of p[2] -- point 11 of p[2] -- point 11 of p[3]
-    -- point 0 of p[3] -- point 0 of p[2] -- point 1 of p[2]
+    nodesAssembleLinearPath(
+      p[2], 10, p[2], 11, p[4], 11, p[4], 0.25, p[2], 0.25, p[2], 1
+    )
   )(1,2,3,4)(5mm)
 );
-
 nodesStackedLabel(
-  "if $x=p$", "then $1'(p,i+1)$", "else empty"
-)(.2mm, p[1], 5.25) shifted (.5cm, 0);
+  "if $x=q$", "then $1'(q,i+1)$", "else empty"
+)(.2mm, p[3], 0.5) ;
+
 
 \stopMPpage

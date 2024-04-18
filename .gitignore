@@ -1,4 +1,5 @@
-diagrams_lpil
+diagrams
+*.paux
 tags
 *_lpil.*
 build

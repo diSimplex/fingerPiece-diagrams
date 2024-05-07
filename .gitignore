@@ -1,6 +1,5 @@
-diagrams
 *.paux
-tags
+plastex
 *_lpil.*
 build
 

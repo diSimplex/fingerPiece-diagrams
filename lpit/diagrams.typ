@@ -3,6 +3,33 @@
 #import "@preview/codly:1.2.0" : *
 #import "@preview/codly-languages:0.1.1": *
 
+//% !TEX root = diagrams.tex
+//% !LPiL preamble = ./dPreamble.tex
+//% !LPiL postamble = ./dPostamble.tex
+//% !LPiL collection = fingerPieces
+
+//\lpilTitle{fp-diag}[
+//  Finger Pieces : Diagrams
+//]{
+  Finger Pieces : A miscellanea of diagrams
+//}
+//\author{Stephen Gaito}
+
+//\maketitle
+
+//\begin{abstract}
+  In this finger piece, we explore the creation of various types of diagrams,
+  from Petri Nets to the Categorical.
+//\end{abstract}
+
+#include "basics/basics.typ"
+
+#include "petriNets/petriNets.typ"
+
+#include "categorical/categorical.typ"
+
+== Some other diagrams
+
 #show: codly-init.with()
 #codly(languages: codly-languages)
 

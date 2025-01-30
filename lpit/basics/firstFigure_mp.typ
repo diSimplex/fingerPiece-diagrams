@@ -1,7 +1,4 @@
-//% !TEX root    = firstFigure_mp.tex
-//% !TEX program = metafun
-
-#import "@preview/cetz:0.3.2" 
+#import "@local/lpit-publisher-papers:0.1.0" : * 
 
 #cetz.canvas({
   import cetz.draw: *

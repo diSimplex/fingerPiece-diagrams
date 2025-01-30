@@ -1,6 +1,4 @@
-#import "@preview/cetz:0.3.2" 
-#import "@preview/fletcher:0.5.4" as fletcher: diagram, node, edge
-#import fletcher.shapes: *
+#import "@local/lpit-publisher-papers:0.1.0" : * 
 
 #diagram(node-stroke: black, {
   node((-2,5), "Res", shape: ellipse, name: <res>)

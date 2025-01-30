@@ -1,7 +1,4 @@
-#import "@preview/codly:1.2.0" : *
-#import "@preview/codly-languages:0.1.1": *
-#show: codly-init.with()
-#codly(languages: codly-languages)
+#import "@local/lpit-publisher-papers:0.1.0" : * 
 
 == The basics of drawing Categorical diagrams <fp-diag-cat>
 

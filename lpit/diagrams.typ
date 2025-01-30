@@ -1,26 +1,17 @@
-#import "@preview/cetz:0.3.2" 
-#import "@preview/fletcher:0.5.4" as fletcher: diagram, node, edge
-#import "@preview/codly:1.2.0" : *
-#import "@preview/codly-languages:0.1.1": *
+#import "@local/lpit-publisher-papers:0.1.0" : * 
 
-//% !TEX root = diagrams.tex
-//% !LPiL preamble = ./dPreamble.tex
-//% !LPiL postamble = ./dPostamble.tex
-//% !LPiL collection = fingerPieces
+#lpitDocument("fp-diag",
+ shortTitle: [ Finger Pieces : Diagrams ],
+ longTitle: [ Finger Pieces : A miscellanea of diagrams ])
 
-//\lpilTitle{fp-diag}[
-//  Finger Pieces : Diagrams
-//]{
-  Finger Pieces : A miscellanea of diagrams
-//}
 //\author{Stephen Gaito}
 
 //\maketitle
 
-//\begin{abstract}
+#abstract[
   In this finger piece, we explore the creation of various types of diagrams,
   from Petri Nets to the Categorical.
-//\end{abstract}
+]
 
 #include "basics/basics.typ"
 

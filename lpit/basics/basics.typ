@@ -1,6 +1,4 @@
-//% !TEX root = basics.tex
-//% !LPiL preamble = ../dPreamble.tex
-//% !LPiL postamble = ../dPostamble.tex
+#import "@local/lpit-publisher-papers:0.1.0" : * 
 
 = The basics of MetaFun <fp-diag-basics>
 

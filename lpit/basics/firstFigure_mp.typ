@@ -1,4 +1,4 @@
-#import "@local/lpit-publisher-papers:0.1.0" : * 
+#import "@local/lpit-publisher-papers:0.2.0" : *
 
 #cetz.canvas({
   import cetz.draw: *

@@ -1,22 +1,22 @@
-#import "@local/lpit-publisher-papers:0.1.0" : * 
+#import "@local/lpit-publisher-papers:0.2.0" : *
 
 #diagram({
 
-  // place the CD nodes 
-  
+  // place the CD nodes
+
   // top row
   node((0,0), $0$, name: <zero1>)
   node((1,0), [Ker $f$], name: <kerf>)
   node((2,0), [Ker $a$], name: <kera>)
   node((3,0), [Ker $b$], name: <kerb>)
   node((4,0), [Ker $c$], name: <kerc>)
-  
+
   // top middle row
   node((2,1), $A$, name: <a>)
   node((3,1), $B$, name: <b>)
   node((4,1), $C$, name: <c>)
   node((5,1), $0$, name: <zero2>)
-  
+
   // bottom middle row
   node((1,2), $0$, name: <zero3>)
   node((2,2), $A'$, name: <a1>)

@@ -1,8 +1,8 @@
-#import "@local/lpit-publisher-papers:0.1.0" : * 
+#import "@local/lpit-publisher-papers:0.2.0" : *
 
 #diagram(node-stroke: black, {
   node((-2,5), "Res", shape: ellipse, name: <res>)
-  
+
   node((2,0), $A$,   shape: circle, name: <a>)
   edge("-|>", $(x,i)$, label-side: left)
   node((2,1), $T 1$, shape: rect, name: <t1>)
@@ -24,7 +24,7 @@
   node((2,9), $T 5$, shape: rect, name: <t5>)
 
   edge(
-    <t5>,(2,10),(6,10), (6,2),<b>, "-|>", 
+    <t5>,(2,10),(6,10), (6,2),<b>, "-|>",
     label: [ if $x = p$ \ then $1'(p,i+1)$ \ else empty ],
     label-side: left,
     label-pos: 85%

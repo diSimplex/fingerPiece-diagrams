@@ -1,0 +1,26 @@
+# This is the LPiT definition YAML file for the <<>> document
+
+doc:
+  id: fp-diag
+  name: diagrams
+  type: paper
+
+title:
+  short: "Finger Pieces : Diagrams"
+  long: "Finger Pieces : A miscellanea of diagrams"
+
+authors:
+  - given: Stephen
+    family: Gaito
+    order: givenFamily
+    email: stephen@perceptisys.co.uk
+
+# packages:
+#   - location: <<>> # optional
+#     name: <<>
+#     version: <<>>
+
+abstract: |
+  In this finger piece, we explore the creation of various types of
+  diagrams, from Petri Nets to the Categorical.
+

@@ -1,17 +1,29 @@
+
+///////////////////////////////////////////////
+// Imports
+
 #import "@local/lpit-publisher-papers:0.2.0" : *
 
-#lpitDocument("fp-diag",
- shortTitle: [ Finger Pieces : Diagrams ],
- longTitle: [ Finger Pieces : A miscellanea of diagrams ])
+///////////////////////////////////////////////
+// Front matter
+
+#setupDoc(yaml("lpit.yaml"))
+
+//#lpitDocument("fp-diag",
+// shortTitle: [ Finger Pieces : Diagrams ],
+// longTitle: [ Finger Pieces : A miscellanea of diagrams ])
 
 //\author{Stephen Gaito}
 
 //\maketitle
 
-#abstract[
+#abstract([
   In this finger piece, we explore the creation of various types of diagrams,
   from Petri Nets to the Categorical.
-]
+])
+
+///////////////////////////////////////////////
+// Body
 
 #include "basics/basics.typ"
 
@@ -50,4 +62,7 @@ $)
   import cetz.draw: *
   grid((0,0),(15,15), step: 0.5, help-lines: true)
 })
+
+/////////////////////////////////////////////////////////////////
+// End matter
 

@@ -7,7 +7,7 @@
 ///////////////////////////////////////////////
 // Front matter
 
-#setupDoc(yaml("lpit.yaml"))
+#show: doc => setupDoc(yaml("lpit.yaml"), doc)
 
 //#lpitDocument("fp-diag",
 // shortTitle: [ Finger Pieces : Diagrams ],

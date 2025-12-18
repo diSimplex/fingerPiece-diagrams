@@ -1,6 +1,6 @@
 #import "@local/lpit-publisher-papers:0.2.0" : *
 
-== The basics of drawing Categorical diagrams <fp-diag-cat>
+== The basics of drawing Categorical diagrams <diag-cat>
 
 We will need to draw lots of Categorical diagrams.
 

@@ -1,6 +1,6 @@
 #import "@local/lpit-publisher-papers:0.2.0" : *
 
-== The basics of drawing Petri Nets <fp-petri-net>
+== The basics of drawing Petri Nets <diag-petri-net>
 
 We will need to draw lots of Petri Nets at various levels of abstraction.
 

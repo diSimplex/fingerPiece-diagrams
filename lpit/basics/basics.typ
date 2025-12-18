@@ -1,6 +1,6 @@
 #import "@local/lpit-publisher-papers:0.2.0" : *
 
-= The basics of MetaFun <fp-diag-basics>
+= The basics of MetaFun <diag-basics>
 
 The diSimplex/LPiL projects make use of the ConTeXt diagramming package MetaFun
 which is in turn based upon MetaPost. We do this by typesetting the diagram
@@ -28,7 +28,7 @@ For example:
 #raw("\includeLpilDiagram{firstFigure_mp}")
 #include "firstFigure_mp.typ"
 
-= Using the commDiag module <commDiag-basics>
+= Using the commDiag module <diag-commDiag-basics>
 
 The ConTeXt commDiag module is a collection of MetaPost/MetaFun macros defined
 ontop of MetaPost, MetaFun, and Nodes which can be used to draw fairly
